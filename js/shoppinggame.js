@@ -36,7 +36,14 @@ this.expiryDate = expiryDate;
 
 
 // Complete the dateDiff function
-const dateDiff = (date1, date2) => {};
+const dateDiff = (date1, date2) => {
+    this.date1 = date1;
+    this.date2 = date2;
+    let timediff = Math.abs(date2.getTime() - date1.getTime());
+    let diffdays = Math.ceil(timediff / (1000 * 3600 * 24));
+    return diffdays;
+    
+};
 
 // Here, use Object.defineProperty to create property - daysToExpire
 
