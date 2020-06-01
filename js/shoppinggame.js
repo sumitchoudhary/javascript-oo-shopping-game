@@ -9,7 +9,17 @@ let player = {
     name: name,
     score: score,
     items: items,
+    getCurrentScore () {
+        return this.score
+    },
+    addPoints (points) {
+       this.score = this.score + points;
 
+    },
+    deductPoints (points) {
+        this.score = this.score - points;
+
+    }
 
 
 }
